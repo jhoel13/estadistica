@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b2035">
+  <meta name="description" content="Laboratorio interactivo de estadística y probabilidad con calculadoras, fórmulas, desarrollo, tablas y gráficos.">
+  <title>Átomo Estadístico · Laboratorio interactivo</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%230b2035'/%3E%3Cpath d='M12 47h40M17 40V27m10 13V16m10 10V30m10 10V22' stroke='%2323ceb4' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./theme.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brandmark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><div><strong>Átomo Estadístico</strong><small>Laboratorio interactivo</small></div></div>
+      <div class="side-section-label">EXPLORAR TEMAS</div>
+      <nav id="sidebarNav" aria-label="Temas de estadística"></nav>
+      <div class="sidebar-bottom"><span class="online-dot"></span> Cálculos en tu navegador <span class="version">v2.0</span></div>
+    </aside>
+    <div class="main-wrap">
+      <header class="topbar"><button id="menuBtn" class="icon-btn menu-btn" aria-label="Abrir menú">☰</button><div class="breadcrumb"><span>LABORATORIO</span><span class="crumb-divider">/</span><strong id="breadcrumbTopic">Descriptiva</strong></div><div class="top-actions"><label class="search"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Buscar tema o calculadora" aria-label="Buscar tema o calculadora"><kbd>/</kbd></label><button id="sourceBtn" class="source-btn">Fuentes <span>↗</span></button></div></header>
+      <main id="main">
+        <div class="page-header"><div><p class="eyebrow" id="topicEyebrow">01 / EXPLORA LOS DATOS</p><h1 id="topicTitle">Estadística descriptiva</h1><p id="topicDescription" class="page-description">Resume, compara y visualiza un conjunto de datos. Introduce tus valores y observa cada paso del cálculo.</p></div><div class="header-art" aria-hidden="true"><span class="art-grid"></span><span class="art-curve"></span><span class="art-dot one"></span><span class="art-dot two"></span></div></div>
+        <div class="workspace">
+          <section class="workspace-main" aria-label="Calculadora">
+            <div class="module-head"><div><span class="module-counter" id="moduleCounter">CALCULADORA 01</span><h2 id="moduleTitle">Medidas descriptivas</h2><p id="moduleDescription">Media, mediana, dispersión y forma de la distribución en un solo lugar.</p></div><span class="live-badge"><span></span> INTERACTIVA</span></div>
+            <div id="tabStrip" class="tab-strip" role="tablist" aria-label="Subtemas"></div>
+            <div class="input-panel"><div class="panel-heading"><span class="panel-icon">✎</span><div><strong>Datos de entrada</strong><small id="inputHint">Separa los valores con coma, espacio o salto de línea.</small></div></div><div id="inputFields" class="field-grid"></div><div class="input-footer"><button class="primary-btn" id="calculateBtn">Calcular resultados</button><button class="quiet-btn" id="exampleBtn">Usar ejemplo</button><span id="inputStatus" role="status"></span></div></div>
+            <div id="resultSection" class="results" aria-live="polite"><div class="result-placeholder"><span>◈</span><strong>Tu análisis aparecerá aquí</strong><p>Introduce los datos y pulsa “Calcular resultados”.</p></div></div>
+          </section>
+          <aside class="insight-panel" aria-label="Guía y fórmula"><div class="guide-card"><div class="guide-label">EN ESTA HERRAMIENTA</div><h3 id="guideTitle">Entiende el resultado</h3><p id="guideText">Las medidas descriptivas condensan un conjunto de observaciones y ayudan a detectar patrones y valores extremos.</p><div class="guide-divider"></div><div class="guide-label">FÓRMULA PRINCIPAL</div><div id="guideFormula" class="math-display"></div><div class="guide-divider"></div><div class="guide-label">INTERPRETACIÓN</div><p id="guideInterpretation">Compara la media y la mediana para explorar posibles asimetrías.</p></div><div class="tip-card"><span>✦</span><p id="tipText">Consejo: introduce al menos dos observaciones para calcular la varianza muestral.</p></div></aside>
+        </div>
+        <section class="source-note" id="sourceNote"><div><span class="book-icon">▤</span><div><strong>Basado en cinco textos de referencia</strong><p>Temario reorganizado por conceptos para aprender y calcular sin cambiar de página.</p></div></div><button id="sourceBottomBtn">Ver bibliografía <span>↗</span></button></section>
+      </main>
+    </div>
+  </div>
+  <dialog id="sourcesDialog"><div class="dialog-head"><div><p class="eyebrow">BIBLIOGRAFÍA</p><h2>Fuentes del temario</h2></div><button id="closeSources" class="icon-btn" aria-label="Cerrar">×</button></div><p>Las fórmulas, explicaciones y ejemplos de esta web están redactados para el laboratorio; los libros orientaron la selección y organización de temas.</p><ol><li>Héctor Galindo-Domínguez, <em>Estadística para no estadísticos</em>.</li><li>Rufino Moya Calderón y Gregorio Saravia, <em>Probabilidad e inferencia estadística</em>.</li><li>Jay L. Devore, <em>Probabilidad y estadística para ingeniería y ciencias</em>.</li><li>Norberto Guarín Salazar, <em>Curso de estadística aplicada</em>.</li><li>Murray R. Spiegel, John J. Schiller y R. Alu Srinivasan, <em>Probabilidad y estadística</em>, Serie Schaum.</li></ol><p class="dialog-foot">El archivo de Schaum está escaneado; sus títulos no se pudieron extraer de forma fiable. Los módulos cubren sus áreas principales junto con los demás textos.</p></dialog>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="./app.js"></script>
+</body>
+</html>
+
