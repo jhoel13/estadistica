@@ -266,3 +266,37 @@ dialog { border-top: 4px solid #22b9a8; }
   .chart-wrap svg path { stroke-dashoffset: 0; }
 }
 
+.utility-btn { color: #276577; border: 1px solid #d7e9eb; border-radius: 8px; background: #f5fbfb; padding: 9px 12px; }
+.utility-btn:hover { color: #0c827d; background: #eaf8f5; transform: translateY(-1px); }
+.table-wrap h4 { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.export-btn { border: 1px solid #cce5e7; border-radius: 7px; padding: 6px 9px; background: #f0faf8; color: #116b73; font-size: 11px; font-weight: 800; white-space: nowrap; }
+.export-btn:hover { background: #dff5f0; }
+.print-inputs { display: none; }
+
+@media print {
+  @page { margin: 15mm; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html, body { background: #fff !important; color: #172b3e !important; font-size: 10pt; }
+  .shell, .main-wrap, main, .workspace, .workspace-main { display: block !important; min-height: 0 !important; width: 100% !important; max-width: none !important; padding: 0 !important; margin: 0 !important; }
+  .sidebar, .topbar, .header-art, .tab-strip, .input-panel, .source-note, .tip-card, .export-btn { display: none !important; }
+  .page-header { min-height: 0 !important; padding: 0 0 13px !important; margin: 0 0 16px !important; border: 0 !important; background: none !important; color: #172b3e !important; }
+  .page-header::after, .page-header::before { display: none !important; }
+  .page-header h1 { color: #172b3e !important; font-size: 19pt; }
+  .page-description, .module-head p { color: #526579 !important; }
+  .module-head { margin-bottom: 10px; }
+  .module-head h2 { font-size: 15pt; }
+  .live-badge { display: none !important; }
+  .print-inputs { display: block; padding: 10px 0; margin: 10px 0 16px; border-top: 1px solid #ccd8df; border-bottom: 1px solid #ccd8df; }
+  .print-inputs h3 { margin: 0 0 6px; font-size: 11pt; }
+  .print-inputs p { margin: 3px 0; overflow-wrap: anywhere; white-space: pre-wrap; }
+  .results, .guide-card { box-shadow: none !important; border: 0 !important; padding: 0 !important; margin: 0 !important; overflow: visible !important; }
+  .results > *, .chart-wrap svg rect, .chart-wrap svg path, .chart-wrap svg circle { animation: none !important; }
+  .metric { break-inside: avoid; border: 1px solid #dce5eb; background: #fff !important; }
+  .chart-wrap, .step, .guide-card { break-inside: avoid-page; }
+  .chart-wrap svg { max-height: 200px; }
+  .insight-panel { display: block !important; margin-top: 22px; }
+  .guide-card { border-top: 1px solid #ccd8df !important; padding-top: 12px !important; }
+  .guide-divider { margin: 8px 0; }
+  .table-wrap thead { display: table-header-group; }
+}
+

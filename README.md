@@ -2,9 +2,11 @@
 
 Laboratorio web de estadística y probabilidad en español. Incluye **44 calculadoras** en siete áreas, con fórmulas en LaTeX, desarrollo paso a paso, tablas y gráficos.
 
+**Abrir la página:** https://jhoel13.github.io/estadistica/
+
 ## Uso
 
-Abre `index.html` en un navegador. Para publicar este repositorio como web, activa **Settings → Pages → Deploy from a branch**, rama `main`, carpeta `/ (root)`.
+Abre el enlace anterior para usar la versión publicada o descarga los archivos y abre `index.html` en un navegador. La página permite copiar un enlace directo a cada calculadora, descargar las tablas en CSV e imprimir el análisis o guardarlo como PDF.
 
 Los cálculos se ejecutan en el navegador y los datos introducidos no se envían a un servidor. KaTeX se carga desde jsDelivr para mostrar las fórmulas; si no hay conexión, el texto matemático permanece visible.
 

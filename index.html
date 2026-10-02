@@ -17,7 +17,7 @@
       <div class="brand"><span class="brandmark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><div><strong>Átomo Estadístico</strong><small>Laboratorio interactivo</small></div></div>
       <div class="side-section-label">EXPLORAR TEMAS</div>
       <nav id="sidebarNav" aria-label="Temas de estadística"></nav>
-      <div class="sidebar-bottom"><span class="online-dot"></span> Cálculos en tu navegador <span class="version">v2.0</span></div>
+      <div class="sidebar-bottom"><span class="online-dot"></span> Cálculos en tu navegador <span class="version">v2.1</span></div>
     </aside>
     <div class="main-wrap">
       <header class="topbar"><button id="menuBtn" class="icon-btn menu-btn" aria-label="Abrir menú">☰</button><div class="breadcrumb"><span>LABORATORIO</span><span class="crumb-divider">/</span><strong id="breadcrumbTopic">Descriptiva</strong></div><div class="top-actions"><label class="search"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Buscar tema o calculadora" aria-label="Buscar tema o calculadora"><kbd>/</kbd></label><button id="sourceBtn" class="source-btn">Fuentes <span>↗</span></button></div></header>
@@ -27,7 +27,8 @@
           <section class="workspace-main" aria-label="Calculadora">
             <div class="module-head"><div><span class="module-counter" id="moduleCounter">CALCULADORA 01</span><h2 id="moduleTitle">Medidas descriptivas</h2><p id="moduleDescription">Media, mediana, dispersión y forma de la distribución en un solo lugar.</p></div><span class="live-badge"><span></span> INTERACTIVA</span></div>
             <div id="tabStrip" class="tab-strip" role="tablist" aria-label="Subtemas"></div>
-            <div class="input-panel"><div class="panel-heading"><span class="panel-icon">✎</span><div><strong>Datos de entrada</strong><small id="inputHint">Separa los valores con coma, espacio o salto de línea.</small></div></div><div id="inputFields" class="field-grid"></div><div class="input-footer"><button class="primary-btn" id="calculateBtn">Calcular resultados</button><button class="quiet-btn" id="exampleBtn">Usar ejemplo</button><span id="inputStatus" role="status"></span></div></div>
+            <div class="input-panel"><div class="panel-heading"><span class="panel-icon">✎</span><div><strong>Datos de entrada</strong><small id="inputHint">Separa los valores con coma, espacio o salto de línea.</small></div></div><div id="inputFields" class="field-grid"></div><div class="input-footer"><button class="primary-btn" id="calculateBtn">Calcular resultados</button><button class="quiet-btn" id="exampleBtn">Usar ejemplo</button><button class="quiet-btn utility-btn" id="shareBtn" type="button">Copiar enlace</button><button class="quiet-btn utility-btn" id="printBtn" type="button">Imprimir / PDF</button><span id="inputStatus" role="status"></span></div></div>
+            <div id="printInputs" class="print-inputs" aria-hidden="true"></div>
             <div id="resultSection" class="results" aria-live="polite"><div class="result-placeholder"><span>◈</span><strong>Tu análisis aparecerá aquí</strong><p>Introduce los datos y pulsa “Calcular resultados”.</p></div></div>
           </section>
           <aside class="insight-panel" aria-label="Guía y fórmula"><div class="guide-card"><div class="guide-label">EN ESTA HERRAMIENTA</div><h3 id="guideTitle">Entiende el resultado</h3><p id="guideText">Las medidas descriptivas condensan un conjunto de observaciones y ayudan a detectar patrones y valores extremos.</p><div class="guide-divider"></div><div class="guide-label">FÓRMULA PRINCIPAL</div><div id="guideFormula" class="math-display"></div><div class="guide-divider"></div><div class="guide-label">INTERPRETACIÓN</div><p id="guideInterpretation">Compara la media y la mediana para explorar posibles asimetrías.</p></div><div class="tip-card"><span>✦</span><p id="tipText">Consejo: introduce al menos dos observaciones para calcular la varianza muestral.</p></div></aside>
@@ -39,6 +40,7 @@
   <dialog id="sourcesDialog"><div class="dialog-head"><div><p class="eyebrow">BIBLIOGRAFÍA</p><h2>Fuentes del temario</h2></div><button id="closeSources" class="icon-btn" aria-label="Cerrar">×</button></div><p>Las fórmulas, explicaciones y ejemplos de esta web están redactados para el laboratorio; los libros orientaron la selección y organización de temas.</p><ol><li>Héctor Galindo-Domínguez, <em>Estadística para no estadísticos</em>.</li><li>Rufino Moya Calderón y Gregorio Saravia, <em>Probabilidad e inferencia estadística</em>.</li><li>Jay L. Devore, <em>Probabilidad y estadística para ingeniería y ciencias</em>.</li><li>Norberto Guarín Salazar, <em>Curso de estadística aplicada</em>.</li><li>Murray R. Spiegel, John J. Schiller y R. Alu Srinivasan, <em>Probabilidad y estadística</em>, Serie Schaum.</li></ol><p class="dialog-foot">El archivo de Schaum está escaneado; sus títulos no se pudieron extraer de forma fiable. Los módulos cubren sus áreas principales junto con los demás textos.</p></dialog>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <script defer src="./app.js"></script>
+  <script defer src="./extras.js"></script>
 </body>
 </html>
 
